@@ -1,4 +1,3 @@
-//debugger
 //function string(number){
 //    let str ="";
 //    let num = number
@@ -13,11 +12,13 @@
 //    }return str;
 //}console.log(string(2614411))
 
-debugger
 function string(num) {
     let str = "";
-    for (; num > 0;  num = (num - (num % 10))/10) {
-        let result =((num % 10) % 2 === 0 && str[0] % 2=== 0)?
-            str = (num % 10 + "-") + str: str = (num % 10) + str;
-    }return str;
-}console.log(string(2614411))
+    for (; num > 0; num = (num - (num % 10)) / 10) {
+        str = ((num % 10) % 2 === 0 && str[0] % 2 === 0) ?
+            (num % 10 + "-") + str : (num % 10) + str;
+    }
+    return str;
+}
+
+console.log(string(2614411))
