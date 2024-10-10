@@ -10,5 +10,5 @@ for(let i=0;i<arr.length;i++){
         highest2 = arr[i]
     }
 } return arr.indexOf(highest2)
-}console.log(number([23, -98, 0, -456, 12, 8]));
-console.log(number([-60, 2, 43, -18, 5, -19, 36, 7, 56 ]));
+}console.log(secondHighest([23, -98, 0, -456, 12, 8]));
+console.log(secondHighest([-60, 2, 43, -18, 5, -19, 36, 7, 56 ]));
