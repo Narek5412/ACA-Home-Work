@@ -8,8 +8,8 @@ function missingWords(str,arr){
             continue
         }
        else if(strArr[i] === "_"){
-           strArr[i]=arr[j]
-           j++
+           strArr[i]=arr[j];
+           j++;
        }
     }return strArr.join("")
 

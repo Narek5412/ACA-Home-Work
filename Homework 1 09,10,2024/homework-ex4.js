@@ -10,7 +10,7 @@ for(let i=0;i<arr.length;i++){
 if(arr[i].length > long){
     long = arr[i].length;
 }else if(short > arr[i].length){
-    short = arr[i].length
+    short = arr[i].length;
 }
 }return long+short
 }console.log(lengthSum(["anymore", "raven", "me", "communicate"]))

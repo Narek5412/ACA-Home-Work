@@ -13,7 +13,7 @@ for(let i=0; i<repeat; i++){
         newArr.push(arr[(arr.length-1)-j]);
     }
 }return newArr;
-}console.log(repeatAndAdd([1, 2, 3, 4],1,3))
-console.log(repeatAndAdd([1, 2, 3, 4],2,1))
-console.log(repeatAndAdd([1],1,3))
-console.log(repeatAndAdd([1],2,3))
+}console.log(repeatAndAdd([1, 2, 3, 4],1,3));
+console.log(repeatAndAdd([1, 2, 3, 4],2,1));
+console.log(repeatAndAdd([1],1,3));
+console.log(repeatAndAdd([1],2,3));

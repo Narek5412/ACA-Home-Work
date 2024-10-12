@@ -9,9 +9,9 @@ function secondHighest(arr){
 for(let i= 2;i < arr.length;i++){
     if(arr[i] > highest){
         highest2 = highest;
-        highest = arr[i]
+        highest = arr[i];
     }else if(arr[i]<highest && arr[i]>highest2){
-        highest2 = arr[i]
+        highest2 = arr[i];
     }
 } return arr.indexOf(highest2)
 }console.log(secondHighest([23, -98, 0, -456, 12, 8]));
