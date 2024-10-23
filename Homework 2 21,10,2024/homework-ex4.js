@@ -1,16 +1,12 @@
 function squarePrint(height,row){
-    let arr =[]
-
-for(let i=0;i < height; i++){
-    arr.push([]);
     let str = ""
-    arr[i].push(str);
-   while(arr[i][0].length < row * 3){
-        if (i === 0 || i === height-1 || arr[i][0].length === 0 || arr[i][0].length === (row -1) * 3 ){
-            arr[i][0] +=" * "
+for(let i=1;i <= height*row; i++){
+        if (i<height || height*row-i<height || i%height === 1  ){
+            str +=" * "
+        }else if(i % height === 0){
+            str +=" *\n"
         }else {
-            arr[i][0] +="   "
+            str +="   "
         }
-    }
-}return arr
+    }return str
 }console.log(squarePrint(7,6));
