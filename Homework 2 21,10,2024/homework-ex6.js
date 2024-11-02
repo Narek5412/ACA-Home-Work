@@ -32,6 +32,6 @@ function number(n) {
         }
         result += line + '\n';
     }
-    return result.trim();
+    return result;
 }
 console.log(number(6));
