@@ -2,9 +2,9 @@ function isNumberPrime(num){
     if(num === 1){return "no"}
 for(let i= 2;i<=num ;i++){
     if(num % i === 0 && num !== i){
-        return "no"
+        return "no";
     }else if( i === num){
-        return "yes"
+        return "yes";
     }
 }
 }console.log(isNumberPrime(401))

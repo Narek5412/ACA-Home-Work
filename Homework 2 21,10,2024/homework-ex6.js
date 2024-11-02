@@ -26,7 +26,7 @@ function number(n) {
                 line += (i + 1);
               num  = i+1
             } else if (j <= i ) {
-                num += n-j
+                num += n-j;
                 line += ' ' + num;
             }
         }
