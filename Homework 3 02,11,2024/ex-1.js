@@ -5,7 +5,9 @@
         5                 true
  */
 function recursiveOdd(num){
-    if(num <= 0){
+    if(num<=0){
+        return false
+    } else if(num < 10 && num % 2 !== 0){
        return true
     }else if(num%2===0){
         return false
