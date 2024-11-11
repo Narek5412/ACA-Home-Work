@@ -6,10 +6,8 @@ given array. (without using arr.shift())
          []                              []
  */
 function customShift(arr, i=0){
-    if(arr.length === 0) {
+    if(arr.length === 0 || i === 1) {
         return arr;
-    }else if(i === 1){
-        return arr
     }
     return customShift(arr.slice(i+1,arr.length),i+1);
 
