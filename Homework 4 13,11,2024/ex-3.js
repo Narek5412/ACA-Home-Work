@@ -3,29 +3,26 @@
  comparison.(Hint: Use Map).
  */
 function customSort(arr, min, max) {
-    let obj = {}
-    for (let elem of arr) {
-        obj[elem] = elem
-    }
-    let map = new Map()
-    for (let key in obj) {
-        if (key[0] !== "-") {
-            map.set(key, obj[key]);
+    let sortedArr = []
+   let map = new Map();
+   for(let elem of arr) {
+       if(map.has(elem)) {
+       map.set(elem, map.get(elem)+1);
+       }else{
+           map.set(elem, 1)
+       }
+   }console.log(map)
+    for (let i = min+1; i - max; i++) {
+        let count = map.get(i);
+        while (count ) {
+            sortedArr.push(i);
+            count--;
         }
     }
-    let arrPositive = Array.from(map.values());
-    let newObj = {}
-    for (let elem of arr) {
-        if (!map.has(`${elem}`)) {
-            newObj[-1 * elem] = -1 * elem
-        }
-    }
-    map.clear()
-    for (let key in newObj) {
-        map.set(-key, obj[-key]);
-    }
-    let arrNegative = Array.from(map.values()).reverse()
-    return arrNegative.concat(arrPositive)
+
+    return sortedArr;
+
 }
 
 console.log(customSort([1, -3, 24, 5, -15, -4, 8, -24, 12, -8], -24, 24));
+console.log(customSort( [5,-10,3,-5,3],-10,5))

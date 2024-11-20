@@ -8,12 +8,10 @@ places to the left. (Hint: to add element to the beginning use arr.unshift())
      }else if(count < -arr.length){
          count += arr.length
      }
-     if(count < 0 && i === arr.length + count){
+     if((count < 0 && i === arr.length + count) || i === count){
          return newArr;
-     } else if(i === count){
-     return newArr;
-}else if(i === 0){
-      newArr= arr.slice(count,arr.length);
+     } else if(i === 0){
+      newArr = arr.slice(count,arr.length);
       newArr.push(arr[i]);
 }else{
      newArr.push(arr[i]);

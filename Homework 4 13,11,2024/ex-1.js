@@ -8,17 +8,22 @@
  */
 
 function deepCopy(object) {
-    let obj = {}
-    for (let i = 0; i < Object.entries(object).length; i++) {
-        if (typeof (object[Object.keys(object)[i]]) === "object") {
-            obj[Object.keys(object)[i]] = deepCopy(Object.values(object)[i])
+    let obj = Array.isArray(object) ? [] : {};
+    for (let key of Object.keys(object)) {
+        let value = object[key];
+        if (typeof value === "object") {
+            obj[key] = deepCopy(value);
         } else {
-            obj[Object.keys(object)[i]] = Object.values(object)[i]
+            obj[key] = value;
         }
-    }return obj
 
+    }
+    return obj
 }
-var a = { a: '1', b: { a: 2 } };
-var b = deepCopy(a);
-a.b.a = 123;
-console.log(b.b.a !== 123);
+
+let a = {a: '1', b: [10, 20]};
+let b = deepCopy(a);
+console.log(b);
+a.b[0]= 123;
+console.log(b.b[0] !== 123);
+

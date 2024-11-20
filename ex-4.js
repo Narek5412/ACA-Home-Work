@@ -23,6 +23,7 @@ function allPossibleSubsets(arr, i = 0, j = i + 1, k = j + 1, newArr = []) {
     return allPossibleSubsets(arr, i, j, k + 1, newArr)
 
 }
+
 console.log(allPossibleSubsets([]))
 console.log(allPossibleSubsets([19, 6]))
 console.log(allPossibleSubsets([4]))
