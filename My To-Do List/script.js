@@ -12,6 +12,13 @@ function addTask() {
     }
 }
 
+taskInput.addEventListener("keypress", key);
+function key(){
+    if(event.keyCode == 13){
+        addTask()
+    }
+}
+
 addButton.addEventListener("click", addTask);
 
 function createTaskElem(task) {
@@ -43,7 +50,6 @@ function createTaskElem(task) {
     deleteButton.addEventListener("click", function() {
         taskList.removeChild(li);
     });
-
 
     checkbox.addEventListener("change", function() {
         if (checkbox.checked) {
