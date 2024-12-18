@@ -33,9 +33,14 @@ function createTaskElem(task) {
     const span = document.createElement("span");
     span.textContent = task;
 
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.className = "editTask";
+
 
     li.appendChild(checkbox);
     li.appendChild(span);
+    li.appendChild(editButton);
 
 
     const deleteButton = document.createElement("button");
@@ -47,15 +52,24 @@ function createTaskElem(task) {
     taskList.appendChild(li);
 
 
-    deleteButton.addEventListener("click", function() {
+    deleteButton.addEventListener("click", function () {
         taskList.removeChild(li);
     });
 
-    checkbox.addEventListener("change", function() {
+    checkbox.addEventListener("change", function () {
         if (checkbox.checked) {
             span.style.textDecoration = "line-through";
         } else {
             span.style.textDecoration = "none";
         }
     });
+editButton.addEventListener("click", function () {
+    const newTask = prompt("Edit your task",span.textContent);
+    if(newTask === ""){
+        alert("Please enter a task");
+        return span
+    }
+    span.textContent = newTask;
+})
+
 }
