@@ -58,6 +58,7 @@ li {
     padding: 10px;
     background-color: #ff7043;
     border-radius: 15px;
+    cursor: pointer;
 
 }
 
@@ -101,3 +102,10 @@ span {
 .editTask:hover {
     background-color: #000000;
 }
+li.completed {
+    text-decoration: line-through;
+    background: #b96342;
+    color: #000000;
+    cursor: pointer;
+}
+
