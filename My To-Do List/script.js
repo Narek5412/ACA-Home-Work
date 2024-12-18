@@ -70,6 +70,7 @@ editButton.addEventListener("click", function () {
         return span
     }
     span.textContent = newTask;
+    span.style.textDecoration = "none";
 })
 
 }
