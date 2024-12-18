@@ -56,7 +56,7 @@ function createTaskElem(task) {
         taskList.removeChild(li);
     });
 
-    checkbox.addEventListener("change", function () {
+    checkbox.addEventListener("click", function () {
         if (checkbox.checked) {
             span.style.textDecoration = "line-through";
         } else {
@@ -64,7 +64,7 @@ function createTaskElem(task) {
         }
     });
 editButton.addEventListener("click", function () {
-    const newTask = prompt("Edit your task",span.textContent);
+    const newTask = prompt("Edit your task","");
     if(newTask === ""){
         alert("Please enter a task");
         return span
